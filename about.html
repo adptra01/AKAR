@@ -20,20 +20,80 @@
 </head>
 <body class="bg-surface font-body text-on-surface antialiased">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-black text-slate-900 dark:text-white tracking-tighter">
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-4 sm:px-8 py-4 max-w-7xl mx-auto">
+<!-- Logo -->
+<a href="index.html" class="text-xl sm:text-2xl font-extrabold text-primary tracking-tighter font-headline">
                 Jasa Website Jambi
-            </div>
-<div class="hidden md:flex gap-8 items-center font-manrope text-sm font-semibold tracking-tight">
-<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="index.html">Home</a>
-<a class="text-orange-600 dark:text-orange-400 border-b-2 border-orange-600 pb-1" href="about.html">Layanan</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="portofolio.html">Portofolio</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="blog.html">Blog</a>
+            </a>
+
+<!-- Desktop Navigation -->
+<div class="hidden lg:flex items-center space-x-8 font-manrope text-sm font-semibold tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 transition-colors" href="index.html">Beranda</a>
+<a class="text-orange-600 border-b-2 border-orange-600 pb-1" href="about.html">Tentang Kami</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 transition-colors" href="portofolio.html">Portofolio</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 transition-colors" href="blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 transition-colors" href="contact.html">Kontak</a>
 </div>
-<div class="flex gap-4">
-<button class="transition-all duration-300 ease-in-out hover:scale-105 px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white border border-outline-variant rounded-md hover:bg-slate-100 dark:hover:bg-slate-800" onclick="window.location.href='contact.html'">Hubungi</button>
-<button class="transition-all duration-300 ease-in-out hover:scale-105 px-4 py-2 text-sm font-semibold bg-orange-600 text-white rounded-md" onclick="window.location.href='contact.html'">Mulai</button>
+
+<!-- Desktop CTA Button -->
+<div class="hidden lg:block">
+<a href="contact.html" class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-2.5 rounded-lg font-headline font-bold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
+                    Hubungi Kami
+<span class="material-symbols-outlined text-sm">send</span>
+</a>
+</div>
+
+<!-- Mobile Menu Button -->
+<button id="menu-toggle" class="lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Toggle menu" aria-expanded="false">
+<span class="w-6 h-0.5 bg-slate-900 dark:bg-white transition-all duration-300 origin-center"></span>
+<span class="w-6 h-0.5 bg-slate-900 dark:bg-white transition-all duration-300 origin-center mt-1.5"></span>
+<span class="w-6 h-0.5 bg-slate-900 dark:bg-white transition-all duration-300 origin-center mt-1.5"></span>
+</button>
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="lg:hidden hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-xl">
+<div class="px-4 sm:px-8 py-6 max-w-7xl mx-auto">
+<!-- Navigation Items -->
+<ul class="space-y-4 mb-6">
+<li>
+<a href="index.html" class="flex items-center justify-between py-3 text-base font-semibold text-slate-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 transition-colors border-b border-slate-100 dark:border-slate-800">
+                        Beranda
+<span class="material-symbols-outlined text-slate-400">home</span>
+</a>
+</li>
+<li>
+<a href="about.html" class="flex items-center justify-between py-3 text-base font-semibold text-slate-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 transition-colors border-b border-slate-100 dark:border-slate-800">
+                        Tentang Kami
+<span class="material-symbols-outlined text-slate-400">info</span>
+</a>
+</li>
+<li>
+<a href="portofolio.html" class="flex items-center justify-between py-3 text-base font-semibold text-slate-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 transition-colors border-b border-slate-100 dark:border-slate-800">
+                        Portofolio
+<span class="material-symbols-outlined text-slate-400">work</span>
+</a>
+</li>
+<li>
+<a href="blog.html" class="flex items-center justify-between py-3 text-base font-semibold text-slate-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 transition-colors border-b border-slate-100 dark:border-slate-800">
+                        Blog
+<span class="material-symbols-outlined text-slate-400">article</span>
+</a>
+</li>
+<li>
+<a href="contact.html" class="flex items-center justify-between py-3 text-base font-semibold text-slate-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 transition-colors border-b border-slate-100 dark:border-slate-800">
+                        Kontak
+<span class="material-symbols-outlined text-slate-400">contact_mail</span>
+</a>
+</li>
+</ul>
+
+<!-- Mobile CTA Button -->
+<a href="contact.html" class="w-full flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-4 rounded-xl font-headline font-bold transition-all duration-300 shadow-lg">
+                    Hubungi Kami
+<span class="material-symbols-outlined">send</span>
+</a>
 </div>
 </div>
 </nav>
@@ -262,42 +322,120 @@
 <!-- Footer -->
 <footer class="bg-slate-900 dark:bg-black w-full pt-16 pb-8 border-t border-slate-800">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
-<div class="col-span-1 md:col-span-1">
+<div class="md:col-span-1">
 <span class="text-xl font-bold text-white mb-4 block">Jasa Website Jambi</span>
-<p class="text-slate-400 text-sm leading-relaxed mb-6">Membangun ekosistem digital Jambi yang lebih kuat, satu website pada satu waktu.</p>
+<p class="text-slate-400 font-inter text-sm leading-relaxed mb-6">
+                    Solusi digital terdepan untuk modernisasi UMKM dan korporasi di Provinsi Jambi. Memadukan teknologi global dengan nilai lokal.
+                </p>
 <div class="flex gap-4">
-<a href="https://wa.me/6281234567890" class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-white transition-colors">public</a>
-<a href="mailto:info@jasawebsitejambi.com" class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-white transition-colors">language</a>
-<a href="contact.html" class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-white transition-colors">share</a>
+<a class="text-slate-400 hover:text-white transition-colors" href="https://wa.me/6281234567890"><span class="material-symbols-outlined">language</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="mailto:hello@jasawebsitejambi.com"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="contact.html"><span class="material-symbols-outlined">alternate_email</span></a>
 </div>
 </div>
 <div>
-<h4 class="text-white font-bold mb-6">Services</h4>
+<h4 class="text-white font-bold mb-6">Layanan</h4>
 <ul class="space-y-4">
-<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="about.html">Web Development</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="about.html">Pembuatan Website</a></li>
 <li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="about.html">Local SEO Jambi</a></li>
 <li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="about.html">SME Digitization</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="about.html">E-Commerce Solutions</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="about.html">UI/UX Design</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-white font-bold mb-6">Company</h4>
+<h4 class="text-white font-bold mb-6">Navigasi</h4>
 <ul class="space-y-4">
-<li><a class="text-orange-400 font-bold hover:underline decoration-orange-500 underline-offset-4" href="about.html">About Us</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="about.html">Our Team</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="index.html">Beranda</a></li>
+<li><a class="text-orange-400 font-bold" href="about.html">Tentang Kami</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="portofolio.html">Portofolio</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="blog.html">Blog</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="contact.html">Kontak</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Bantuan</h4>
+<ul class="space-y-4">
 <li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="contact.html">Privacy Policy</a></li>
 <li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="contact.html">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors hover:underline decoration-orange-500 underline-offset-4" href="contact.html">Hubungi Kami</a></li>
 </ul>
 </div>
-<div>
-<h4 class="text-white font-bold mb-6">Contact</h4>
-<p class="text-slate-400 text-sm mb-4">Jl. Gatot Subroto, No. 12<br/>Kota Jambi, Jambi 36123</p>
-<p class="text-slate-400 text-sm mb-2">info@jasawebsitejambi.com</p>
-<p class="text-slate-400 text-sm">+62 741 0000 123</p>
 </div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-xs font-inter">© 2024 Jasa Website Jambi. Digital Excellence in Sumatra.</p>
+<div class="flex gap-6 text-xs text-slate-500">
+<span>Jambi, Indonesia</span>
+<span>Sumatra Regional Hub</span>
 </div>
-<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-slate-800 text-center">
-<p class="text-slate-400 text-sm">© 2024 Jasa Website Jambi. Digital Excellence in Sumatra.</p>
 </div>
 </footer>
+
+<!-- Mobile Menu Script -->
+<script>
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuToggleLines = menuToggle.querySelectorAll('span');
+const body = document.body;
+
+let isMenuOpen = false;
+
+function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+
+    // Toggle menu visibility
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('block');
+
+    // Animate hamburger icon
+    if (isMenuOpen) {
+        menuToggleLines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        menuToggleLines[1].style.opacity = '0';
+        menuToggleLines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+        menuToggle.setAttribute('aria-expanded', 'true');
+        body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    } else {
+        menuToggleLines[0].style.transform = '';
+        menuToggleLines[1].style.opacity = '1';
+        menuToggleLines[2].style.transform = '';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = ''; // Re-enable scrolling
+    }
+}
+
+// Click event for menu toggle
+menuToggle.addEventListener('click', toggleMenu);
+
+// Close menu when clicking on a link
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (isMenuOpen) {
+            toggleMenu();
+        }
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (isMenuOpen && !menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        toggleMenu();
+    }
+});
+
+// Close menu on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isMenuOpen) {
+        toggleMenu();
+    }
+});
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024 && isMenuOpen) { // lg breakpoint
+        toggleMenu();
+    }
+});
+</script>
+
 </body></html>
